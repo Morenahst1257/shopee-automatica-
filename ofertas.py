@@ -1,26 +1,21 @@
 
-# Robo gratuito de ofertas Shopee
-# Prepara textos para Pinterest e Facebook
+# Robô de ofertas para afiliados Shopee
 
-ofertas = [
-    {
-        "produto": "Produto de exemplo",
-        "preco": "R$ 29,90",
-        "link": "COLE_AQUI_SEU_LINK_DE_AFILIADA"
-    }
-]
+def criar_oferta(nome, preco, link_afiliado):
+    oferta = f"""
+🔥 ACHADINHO SHOPEE 🔥
 
-def preparar_publicacoes():
-    for oferta in ofertas:
-        texto = (
-            f"✨ Confira: {oferta['produto']}\n"
-            f"💰 Preço: {oferta['preco']}\n"
-            f"🛍️ Veja aqui: {oferta['link']}\n"
-            "#Shopee #Achadinhos #Ofertas"
-        )
+🛍️ Produto: {nome}
+💰 Preço: R$ {preco}
 
-        print("\n--- PUBLICAÇÃO PARA PINTEREST E FACEBOOK ---")
-        print(texto)
+🛒 Confira aqui:
+{link_afiliado}
+
+#Shopee #Achadinhos #Ofertas
+"""
+    return oferta.strip()
+
 
 if __name__ == "__main__":
-    preparar_publicacoes()
+    print("Robô de ofertas iniciado!")
+    print("Configure os produtos e links para gerar suas ofertas.")
